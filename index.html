@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script defer src="https://player.twitch.tv/js/embed/v1.js"></script>
 </head>
 
-<body class="bg-dark" data-spy="scroll" data-target="#scrollspy" data-offset="100">
+<body class="bg-dark" data-spy="scroll" data-target="#scrollspy" data-offset="100" style="padding-top:100px;">
     <header>
         <div class="bg-dark collapse" id="navbarHeader">
             <div class="container">
@@ -56,151 +58,267 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://old.reddit.com/r/offlineTV/" target="_blank"><i class="fab fa-reddit-alien mr-2"></i>Reddit</a>
+                            <a class="nav-link" href="https://old.reddit.com/r/offlineTV/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-reddit-alien mr-2"></i>Reddit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://offlinetv.3blackdot.com/" target="_blank"><i class="fas fa-tshirt mr-2"></i>Merch</a>
+                            <a class="nav-link" href="https://offlinetv.3blackdot.com/" target="_blank"
+                                rel="noopener noreferrer"><i class="fas fa-tshirt mr-2"></i>Merch</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <main role="main" class="pt-5" id="twitch">
-        <div class="py-5">
-            <div class="container position-relative">
-                <div class="row position-relative">
-                    <i class="fab fa-twitch fa-5x position-absolute" style="right:100%;top:0;"></i>
-                    <div class="col">
-                        <div class="bg-dark d-flex flex-row flex-wrap justify-content-between">
-                            <div id="lilypichu" class="my-2"></div>
-                            <div id="pokimane" class="my-2"></div>
-                            <div id="scarra" class="my-2"></div>
-                            <div id="fedmyster" class="my-2"></div>
-                            <div id="yvonnie" class="my-2"></div>
-                            <div id="offlinetv" class="my-2"></div>
-                        </div>
-                        <hr class="border-light">
-                    </div>
-                </div>
-                <div class="row position-relative" id="youtube">
-                    <i class="fab fa-youtube fa-5x position-absolute" style="right:100%;top:0;"></i>
-                    <div class="col">
-                        <div class="bg-dark d-flex flex-row flex-wrap justify-content-between">
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">OfflineTV</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUDK9qD5DAQML-pzrtA7A4oA"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2" id="youtube">
-                                <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">OfflineTV &amp; Friends</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUFYwikSUjLzDt0F_bu6Od4Q"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">OfflineTV Podcast</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUuaIy5fmf85DkOnUUdn4ihQ"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="lilypichu.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Lilypichu</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUvWU1K29wCZ8j1NsXsRrKnA"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="toast.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Disguised Toast</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUUT8RoNBTJvwW1iErP6-b-A"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="poki.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Pokimane</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUhXKjLEzAB1K7EZQey7Fm1Q"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="nightmare.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Michael Reeves</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUtHaxi4GTYDpJgMSGy7AeSw"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="scarra.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Scarra</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUan_L4XHfSbCKaTCcntyLTQ"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="fed.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Fedmyster</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUOmXyEquWIIo1uAj_2LN4UA"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="card bg-dark text-light my-2">
-                                <div class="card-header"><img src="yvonne.jpg" alt="" width="30px" height="30px"
-                                        class="rounded-circle mr-2">Yvonne</div>
-                                <iframe width="350" height="197"
-                                    src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUgDvko7FcHndaS-QoLJw_PA"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <hr class="border-light">
-                    </div>
-                </div>
-                <div class="row position-relative" id="twitter">
-                    <i class="fab fa-twitter fa-5x position-absolute" style="right:100%;top:0;"></i>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/OfflineTV">Tweets by OfflineTV</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/lilypichu">Tweets by Lilypichu</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/disguisedtoast">Tweets by Disguised Toast</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/michaelreeves">Tweets by Michael Reeves</a>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/pokimanelol">Tweets by Pokimane</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/scarra">Tweets by Scarra</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/fedmyster">Tweets by Fedmyster</a>
-                    </div>
-                    <div class="col">
-                        <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                            href="https://twitter.com/yvonnieng">Tweets by Yvonne</a>
+    <main role="main" id="twitch">
+        <div class="container" hidden>
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron bg-secondary text-light mt-5">
+                        <h1 class="display-4">OfflineTV Status</h1>
+                        <h1 class="d-none d-xl-block">XL</h1>
+                        <h1 class="d-none d-lg-block d-xl-none">LG</h1>
+                        <h1 class="d-none d-md-block d-lg-none">MD</h1>
+                        <h1 class="d-none d-sm-block d-md-none">SM</h1>
+                        <h1 class="d-block d-sm-none">XS</h1>
+                        <p class="lead">Find out who is online on Twitch, their latest YouTube videos and Tweets!</p>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="container position-relative">
+            <div class="row position-relative no-gutters">
+                <div class="col-12 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fab fa-twitch mr-2"></i>Twitch</h5>
+                            <p class="card-text">Find out who is streaming right now, if everyone is offline, just sroll
+                                down to the YouTube section.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="lilypichu" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="pokimane" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="scarra" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="fedmyster" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="yvonnie" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div id="offlinetv" class="embed-responsive embed-responsive-16by9 rounded"></div>
+                </div>
+            </div>
+            <div class="row position-relative no-gutters mt-5" id="youtube">
+                <div class="col-12 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fab fa-youtube mr-2"></i>YouTube</h5>
+                            <p class="card-text">All the official OTV channels and each member's personal channel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCDK9qD5DAQML-pzrtA7A4oA/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">OfflineTV</a></div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUDK9qD5DAQML-pzrtA7A4oA"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCuaIy5fmf85DkOnUUdn4ihQ/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">OfflineTV Podcast</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUuaIy5fmf85DkOnUUdn4ihQ"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2" id="youtube">
+                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCFYwikSUjLzDt0F_bu6Od4Q/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">OfflineTV &amp;
+                                Friends</a></div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUFYwikSUjLzDt0F_bu6Od4Q"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="lilypichu.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/LilyPichu/videos"
+                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Lilypichu</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUvWU1K29wCZ8j1NsXsRrKnA"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="toast.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCUT8RoNBTJvwW1iErP6-b-A/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Disguised Toast</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUUT8RoNBTJvwW1iErP6-b-A"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="poki.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/pokimane/videos"
+                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Pokimane</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUhXKjLEzAB1K7EZQey7Fm1Q"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="nightmare.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCtHaxi4GTYDpJgMSGy7AeSw/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Michael Reeves</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUtHaxi4GTYDpJgMSGy7AeSw"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="scarra.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/scarraofficial/videos"
+                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Scarra</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUan_L4XHfSbCKaTCcntyLTQ"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="fed.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCOmXyEquWIIo1uAj_2LN4UA/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Fedmyster</a></div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUOmXyEquWIIo1uAj_2LN4UA"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="yvonne.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCgDvko7FcHndaS-QoLJw_PA/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Yvonne</a></div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUgDvko7FcHndaS-QoLJw_PA"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="lilyvodchu.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UC0FAPPxkgxmSkd-70Pnnc8w/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">LilyVODchu</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UU0FAPPxkgxmSkd-70Pnnc8w"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
+                    <div class="card bg-dark text-light my-2">
+                        <div class="card-header"><img src="poki-too.jpg" alt="" width="30px" height="30px"
+                                class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/channel/UCAgjRmMl1C0joYWjex56Oqw/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Pokimane Too</a>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
+                                height="480"
+                                src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUAgjRmMl1C0joYWjex56Oqw"
+                                frameborder="0" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row position-relative no-gutters mt-5" id="twitter">
+                <div class="col-12 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fab fa-twitter mr-2"></i>Twitter</h5>
+                            <p class="card-text">Here is what OTV has been tweeting about.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/OfflineTV">Tweets by OfflineTV</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/lilypichu">Tweets by Lilypichu</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/disguisedtoast">Tweets by Disguised Toast</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/michaelreeves">Tweets by Michael Reeves</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/pokimanelol">Tweets by Pokimane</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/scarra">Tweets by Scarra</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/fedmyster">Tweets by Fedmyster</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
+                    <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
+                        href="https://twitter.com/yvonnieng">Tweets by Yvonne</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="text-muted">
         <div class="container">
@@ -222,38 +340,38 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var player = new Twitch.Player("lilypichu", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "lilypichu"
             });
             var player = new Twitch.Player("pokimane", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "pokimane"
             });
             var player = new Twitch.Player("scarra", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "scarra"
             });
             var player = new Twitch.Player("fedmyster", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "fedmyster"
             });
             var player = new Twitch.Player("yvonnie", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "yvonnie"
             });
             var player = new Twitch.Player("offlinetv", {
-                width: 350,
-                height: 197,
+                width: 720,
+                height: 480,
                 autoplay: false,
                 channel: "offlinetv"
             });
