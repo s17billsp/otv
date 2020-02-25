@@ -6,90 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OfflineTV Status</title>
+    <meta name="description" content="Find out who is live from OfflineTV, their latest YouTube videos or Tweets!">
+    <meta name="robots" content="noindex,nofollow">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="/assets/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="/">
+    <meta property="og:title" content="OfflineTV Live Status">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://offlinetv.live">
+    <meta property="og:image" content="https://offlinetv.live/assets/img/otv.jpg">
+    <meta property="og:description"
+        content="Find out who is live from OfflineTV, their latest YouTube videos or Tweets!">
     <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script defer src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <style>
+        body {
+            background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        }
+
+        .card {
+            background-color: #29323c;
+        }
+    </style>
 </head>
 
-<body class="bg-dark" data-spy="scroll" data-target="#scrollspy" data-offset="100" style="padding-top:100px;">
-    <header>
-        <div class="bg-dark collapse" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">OTV Status is a fan made project to let fans like myself get all the
-                            latest/live content from OfflineTV without having to go through Twitch, YouTube or Twitter
-                            individually. <br><br><em>I have not (nor do I plan on) adding ads to this site, no
-                                analytics or tracking beyond what twitch/youtube add via their video embeds has been
-                                added either.</em></p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Message me on Discord</a></li>
-                            <li><a href="mailto@" class="text-white">Email me</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="scrollspy" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <img src="otv.png" alt="OfflineTV logo" class="mr-2">
+<body>
+    <header class="border-bottom border-secondary mb-5" id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0 py-3">
+                <h1 class="hidden" hidden>OfflineTV Live Status</h1>
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <img src="/assets/img/otv.png" alt="OfflineTV logo" width="30px" height="30px" class="mr-2">
                     <strong>OfflineTV Status</strong>
                 </a>
-                <div class="collapse navbar-collapse">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#twitch"><i class="fab fa-twitch mr-2"></i>Twitch</a>
+                            <a class="nav-link text-white" href="#twitch"><i class="fab fa-twitch mr-2"></i>Twitch</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#youtube"><i class="fab fa-youtube mr-2"></i>YouTube</a>
+                            <a class="nav-link text-white" href="#youtube"><i
+                                    class="fab fa-youtube mr-2"></i>YouTube</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#twitter"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+                            <a class="nav-link text-white" href="#twitter"><i
+                                    class="fab fa-twitter mr-2"></i>Twitter</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://old.reddit.com/r/offlineTV/" target="_blank"
+                            <a class="nav-link text-white" href="https://old.reddit.com/r/offlineTV/" target="_blank"
                                 rel="noopener noreferrer"><i class="fab fa-reddit-alien mr-2"></i>Reddit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://offlinetv.3blackdot.com/" target="_blank"
+                            <a class="nav-link text-white" href="https://offlinetv.3blackdot.com/" target="_blank"
                                 rel="noopener noreferrer"><i class="fas fa-tshirt mr-2"></i>Merch</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
     <main role="main" id="twitch">
-        <div class="container" hidden>
-            <div class="row">
-                <div class="col">
-                    <div class="jumbotron bg-secondary text-light mt-5">
-                        <h1 class="display-4">OfflineTV Status</h1>
-                        <h1 class="d-none d-xl-block">XL</h1>
-                        <h1 class="d-none d-lg-block d-xl-none">LG</h1>
-                        <h1 class="d-none d-md-block d-lg-none">MD</h1>
-                        <h1 class="d-none d-sm-block d-md-none">SM</h1>
-                        <h1 class="d-block d-sm-none">XS</h1>
-                        <p class="lead">Find out who is online on Twitch, their latest YouTube videos and Tweets!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="container position-relative">
             <div class="row position-relative no-gutters">
                 <div class="col-12 p-2">
-                    <div class="card">
+                    <h5 class="display-4 text-light"><i class="fab fa-twitch mr-3"></i>Twitch</h5>
+                    <p class="lead text-light">Find out who is streaming right now, if everyone is offline, just sroll
+                        down to the YouTube section.<a href="https://www.facebook.com/gaming/disguisedtoast"
+                            target="_blank" data-toggle="tooltip" data-html="true"
+                            data-title="Nightmare! Bad! Bad! Facebook API BAD!<br>Click here to go to facebook gaming to find Toast."
+                            class="ml-2"><img src="/assets/img/toast.jpg" alt="disguisedtoast avatar"
+                                class="rounded-circle" width="30px" height="30px"></a>
+                    </p>
+                    <div class="card bg-secondary text-light" hidden>
                         <div class="card-body">
                             <h5 class="card-title"><i class="fab fa-twitch mr-2"></i>Twitch</h5>
                             <p class="card-text">Find out who is streaming right now, if everyone is offline, just sroll
@@ -118,17 +117,13 @@
             </div>
             <div class="row position-relative no-gutters mt-5" id="youtube">
                 <div class="col-12 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fab fa-youtube mr-2"></i>YouTube</h5>
-                            <p class="card-text">All the official OTV channels and each member's personal channel.</p>
-                        </div>
-                    </div>
+                    <h5 class="display-4 text-light"><i class="fab fa-youtube mr-2"></i>YouTube</h5>
+                    <p class="lead text-light">All the official OTV channels and each member's personal channel.</p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/offlinetv.jpg" alt="offlinetv logo" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCDK9qD5DAQML-pzrtA7A4oA/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">OfflineTV</a></div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
@@ -138,9 +133,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/offlinetv.jpg" alt="offlinetv logo" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCuaIy5fmf85DkOnUUdn4ihQ/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">OfflineTV Podcast</a>
                         </div>
@@ -151,9 +146,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2" id="youtube">
-                        <div class="card-header"><img src="offlinetv.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2" id="youtube">
+                        <div class="card-header"><img src="/assets/img/offlinetv.jpg" alt="offlinetv logo" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCFYwikSUjLzDt0F_bu6Od4Q/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">OfflineTV &amp;
                                 Friends</a></div>
@@ -164,10 +159,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="lilypichu.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/LilyPichu/videos"
-                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Lilypichu</a>
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/lilypichu.jpg" alt="lilypichu avatar"
+                                width="30px" height="30px" class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/user/LilyPichu/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Lilypichu</a>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
                                 height="480"
@@ -176,9 +172,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="toast.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/toast.jpg" alt="disguisedtoast avatar"
+                                width="30px" height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCUT8RoNBTJvwW1iErP6-b-A/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">Disguised Toast</a>
                         </div>
@@ -189,10 +185,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="poki.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/pokimane/videos"
-                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Pokimane</a>
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/poki.jpg" alt="pokimane avatar" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/user/pokimane/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Pokimane</a>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
                                 height="480"
@@ -201,9 +198,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="nightmare.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/nightmare.jpg" alt="michaelreeves avatar"
+                                width="30px" height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCtHaxi4GTYDpJgMSGy7AeSw/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">Michael Reeves</a>
                         </div>
@@ -214,10 +211,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="scarra.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a href="https://www.youtube.com/user/scarraofficial/videos"
-                                target="_blank" class="text-light align-middle" rel="noopener noreferrer">Scarra</a>
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/scarra.jpg" alt="scarra avatar" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
+                                href="https://www.youtube.com/user/scarraofficial/videos" target="_blank"
+                                class="text-light align-middle" rel="noopener noreferrer">Scarra</a>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
                                 height="480"
@@ -226,9 +224,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="fed.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/fed.jpg" alt="fed avatar" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCOmXyEquWIIo1uAj_2LN4UA/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">Fedmyster</a></div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
@@ -238,11 +236,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="yvonne.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/yvonnie.jpg" alt="yvonnie avatar" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCgDvko7FcHndaS-QoLJw_PA/videos" target="_blank"
-                                class="text-light align-middle" rel="noopener noreferrer">Yvonne</a></div>
+                                class="text-light align-middle" rel="noopener noreferrer">Yvonnie</a></div>
                         <div class="embed-responsive embed-responsive-16by9 rounded-bottom"><iframe width="720"
                                 height="480"
                                 src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&list=UUgDvko7FcHndaS-QoLJw_PA"
@@ -250,9 +248,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="lilyvodchu.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/lilyvodchu.jpg" alt="lilypichu avatar"
+                                width="30px" height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UC0FAPPxkgxmSkd-70Pnnc8w/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">LilyVODchu</a>
                         </div>
@@ -263,9 +261,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-2">
-                    <div class="card bg-dark text-light my-2">
-                        <div class="card-header"><img src="poki-too.jpg" alt="" width="30px" height="30px"
-                                class="rounded-circle mr-2"><a
+                    <div class="card border-0 text-light my-2">
+                        <div class="card-header"><img src="/assets/img/poki-too.jpg" alt="pokimane avatar" width="30px"
+                                height="30px" class="rounded-circle mr-2"><a
                                 href="https://www.youtube.com/channel/UCAgjRmMl1C0joYWjex56Oqw/videos" target="_blank"
                                 class="text-light align-middle" rel="noopener noreferrer">Pokimane Too</a>
                         </div>
@@ -278,12 +276,11 @@
             </div>
             <div class="row position-relative no-gutters mt-5" id="twitter">
                 <div class="col-12 p-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fab fa-twitter mr-2"></i>Twitter</h5>
-                            <p class="card-text">Here is what OTV has been tweeting about.</p>
-                        </div>
-                    </div>
+                    <h5 class="display-4 text-light"><i class="fab fa-twitter mr-2"></i>Twitter</h5>
+                    <p class="lead text-light">Here is what OTV has been tweeting about.<i
+                            class="fas fa-info-circle ml-2" data-toggle="tooltip"
+                            data-title="If this section is empty, your adblock is likely blocking the twitter widget."></i>
+                    </p>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
                     <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
@@ -315,17 +312,23 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-2">
                     <a class="twitter-timeline" data-height="400" data-dnt="true" data-theme="dark"
-                        href="https://twitter.com/yvonnieng">Tweets by Yvonne</a>
+                        href="https://twitter.com/yvonnie">Tweets by Yvonnie</a>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="text-muted">
+    <footer class="text-muted mt-5">
         <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>This status page is a fan made project, I am not affiliated with OfflineTV in any way.</p>
+            <div class="row no-gutters">
+                <div class="col">
+                    <p>This is a fan made project, I am not part of OfflineTV, I just wanted a place to get all the
+                        latest content.<br><small>If you have any suggestions for the site or want to contact me, you
+                            can message me on <a href="https://old.reddit.com/message/compose/?to=DrunkCatsnake"
+                                class="text-white" target="_blank"><i class="fab fa-reddit-alien"></i>
+                                reddit</a></small><a href="#header" class="text-white float-right"><i
+                                class="fas fa-arrow-up"></i> Back to top</a></p>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -338,44 +341,37 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript">
+        let streamers = [
+            'lilypichu',
+            'pokimane',
+            'scarra',
+            'fedmyster',
+            'yvonnie',
+            'offlinetv'
+        ];
+        let defaultWidth = 720;
+        let defaultHeight = 480;
         $(document).ready(function () {
-            var player = new Twitch.Player("lilypichu", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "lilypichu"
+            // Initialise twitch stream embeds
+            $.each(streamers, function (i, val) {
+                let player = new Twitch.Player(val, {
+                    width: defaultWidth,
+                    height: defaultHeight,
+                    autoplay: false,
+                    channel: val
+                });
             });
-            var player = new Twitch.Player("pokimane", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "pokimane"
+            // Initialise bootstrap tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        // Smooth scroll animation for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-            var player = new Twitch.Player("scarra", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "scarra"
-            });
-            var player = new Twitch.Player("fedmyster", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "fedmyster"
-            });
-            var player = new Twitch.Player("yvonnie", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "yvonnie"
-            });
-            var player = new Twitch.Player("offlinetv", {
-                width: 720,
-                height: 480,
-                autoplay: false,
-                channel: "offlinetv"
-            });
-            // player.setVolume(0.5);
         });
     </script>
 </body>
