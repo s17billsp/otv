@@ -86,16 +86,39 @@
     </header>
     <main role="main">
         <div class="container position-relative">
-            <div class="row position-relative no-gutters" id="clips">
+            <div class="row position-relative no-gutters">
                 <div class="col-12 p-2">
                     <h5 class="display-4 text-light"><i class="fab fa-twitch mr-3"></i>Clips</h5>
-                    <p class="lead text-light">Here are the top clips from OfflineTV in the last 7 days.<i
-                        class="fas fa-info-circle ml-2" data-toggle="tooltip"
-                        data-title="I will be extending my API and add a 24h clip section soon!"></i></p>
+                    <p class="lead text-light">Here are the top clips from OfflineTV from the last 7 days or 24 hours.
+                    </p>
                 </div>
-                <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="col-12 px-2">
+                    <ul class="nav nav-pills mb-3" id="pills-tab">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" id="week-tab" data-toggle="pill" href="#week"
+                                onclick="getClips('week')">7
+                                Days</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" id="day-tab" data-toggle="pill" href="#day"
+                                onclick="getClips('day')">24 Hours</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="container tab-pane fade show active" id="week">
+                <div class="row position-relative no-gutters" id="weekClips">
                     <div class="fa-3x w-100 mx-2 loader text-center rounded">
-                        <i class="fas fa-circle-notch fa-spin text-light my-5"></i>
+                        <i class="fas fa-circle-notch fa-spin text-muted my-5"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container tab-pane fade" id="day">
+                <div class="row position-relative no-gutters" id="dayClips">
+                    <div class="fa-3x w-100 mx-2 loader text-center rounded">
+                        <i class="fas fa-circle-notch fa-spin text-muted my-5"></i>
                     </div>
                 </div>
             </div>
@@ -122,8 +145,8 @@
                     <i class="fas fa-times-circle text-white"></i>
                 </button>
                 <div class="modal-body embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="" frameborder="0" scrolling="no"
-                        allowfullscreen="true"></iframe>
+                    <iframe class="embed-responsive-item" src="" frameborder="0" scrolling="no" allowfullscreen="true"
+                        allow="autoplay; fullscreen"></iframe>
                 </div>
             </div>
         </div>
@@ -138,17 +161,32 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript">
-        let api_url = 'https://api.offlinetv.live/clips';
         // Load the clip when play button clicked
         function playClip(url) {
             $('#clip iframe').attr('src', url);
             $('#clip').modal('show');
         }
-        $(document).ready(function () {
+        // Format the number of views with thousands separator
+        function parse(n) {
+            return n.toLocaleString()
+        }
+        // Get clips from the API and add them to the page
+        function getClips(timeframe) {
+            if (timeframe == 'week') {
+                var api_url = 'https://api.offlinetv.live/clips/week';
+                var target = '#weekClips';
+            } else if (timeframe == 'day') {
+                var api_url = 'https://api.offlinetv.live/clips/day';
+                var target = '#dayClips';
+            }
+            // Don't make more API calls if clips have already been loaded
+            if ($(target).hasClass('loaded')) {
+                return;
+            }
             // API call to retrieve clips
             $.getJSON(api_url, function (data) {
                 let items = [];
-                $(".loader").fadeOut();
+                // $(".loader").fadeOut();
                 $.each(data, function (i, clip) {
                     let timestamp = moment(clip.created_at);
                     let html = $([
@@ -170,18 +208,18 @@
                         "  </div>",
                         "</div>",
                     ].join("\n"));
-                    $('#clips').append(html);
+                    $(target).append(html).addClass('loaded').find('.loader').fadeOut();
                 });
             });
+        }
+        $(document).ready(function () {
             // Unload the clip when the modal is closed
             $('#clip').on('hide.bs.modal', function (e) {
                 $(this).find('iframe').attr('src', '');
             })
             // Initialise bootstrap tooltips
             $('[data-toggle="tooltip"]').tooltip();
-            function parse(n) {
-                return n.toLocaleString()
-            }
+            getClips('week');
         });
     </script>
 </body>
