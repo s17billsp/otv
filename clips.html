@@ -69,6 +69,10 @@
                             <a class="nav-link text-white" href="/"><i class="fas fa-undo-alt mr-2"></i>Back to Status
                                 Page</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/friends"><i class="fas fa-film mr-2"></i>Friends Clips<span
+                                    class="badge badge-pill badge-primary ml-2 align-top">New</span></a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -199,7 +203,7 @@
                         "      </div>",
                         "    </div>",
                         "    <div class='card-body p-3'>",
-                        "      <h5 class='card-title mb-2'><img src='/assets/img/" + clip.broadcaster_id + ".png' alt='" + clip.broadcaster_name + " avatar' width='30px' height='30px' class='rounded-circle mr-2'>" + clip.broadcaster_name + "</h5>",
+                        "      <h5 class='card-title mb-2'><img src='/assets/img/" + clip.broadcaster_id + ".png' alt='" + clip.broadcaster_name + " avatar' width='30px' height='30px' class='rounded-circle mr-2'><a href='https://www.twitch.tv/" + clip.broadcaster_name + "' target='_blank' class='text-white'>" + clip.broadcaster_name + "</a></h5>",
                         "      <p class='card-text text-truncate'>" + clip.title + "</p>",
                         "    </div>",
                         "    <div class='card-footer px-3'>",
