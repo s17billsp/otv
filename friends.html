@@ -166,7 +166,7 @@
     <script type="text/javascript">
         // Load the clip when play button clicked
         function playClip(url) {
-            $('#clip iframe').attr('src', url);
+            $('#clip iframe').attr('src', url + '&parent=offlinetv.live');
             $('#clip').modal('show');
         }
         // Format the number of views with thousands separator
