@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OfflineTV Clips</title>
+    <title>OfflineTV & Friends Clips</title>
     <meta name="description" content="Watch the latest clips from OfflineTV in the last 7 days.">
     <meta name="robots" content="noindex,nofollow">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="/">
-    <meta property="og:title" content="OfflineTV Clips">
+    <meta property="og:title" content="OfflineTV & Friends Clips">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://offlinetv.live/clips">
     <meta property="og:image" content="https://offlinetv.live/assets/img/otv.jpg">
@@ -54,10 +54,10 @@
     <header class="border-bottom border-secondary mb-5" id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark px-0 py-3">
-                <h1 class="hidden" hidden>OfflineTV Clips</h1>
+                <h1 class="hidden" hidden>OfflineTV &amp; Friends Clips</h1>
                 <a href="/clips" class="navbar-brand d-flex align-items-center">
                     <img src="assets/img/otv.png" alt="OfflineTV logo" width="30px" height="30px" class="mr-2">
-                    <strong>OfflineTV Clips</strong>
+                    <strong>OfflineTV &amp; Friends Clips</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                     aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +68,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/"><i class="fas fa-undo-alt mr-2"></i>Back to Status
                                 Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/clips"><i class="fas fa-film mr-2"></i>OTV Clips</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/friends"><i class="fas fa-film mr-2"></i>Friends Clips</a>
@@ -91,8 +94,11 @@
         <div class="container position-relative">
             <div class="row position-relative no-gutters">
                 <div class="col-12 p-2">
-                    <h5 class="display-4 text-light"><i class="fab fa-twitch mr-3"></i>Clips</h5>
-                    <p class="lead text-light">Here are the top clips from OfflineTV from the last 7 days or 24 hours.
+                    <div class="d-flex align-items-center">
+                        <h5 class="display-4 text-light"><i class="fab fa-twitch mr-3"></i>All Clips</h5>
+                        <span class="badge badge-warning ml-3" data-toggle="tooltip" data-html="true" title="Clips from all creators are shown, OTV & Friends.<br><small>P.S. Hi Dunois ;)">Editor Mode</span>
+                    </div>
+                    <p class="lead text-light">Here are the top clips from OfflineTV &amp; Friends from the last 7 days or 24 hours.
                     </p>
                 </div>
                 <div class="col-12 px-2">
@@ -176,10 +182,10 @@
         // Get clips from the API and add them to the page
         function getClips(timeframe) {
             if (timeframe == 'week') {
-                var api_url = 'https://api.offlinetv.live/clips?timeframe=week&group=otv';
+                var api_url = 'https://api.offlinetv.live/clips?timeframe=week&group=all';
                 var target = '#weekClips';
             } else if (timeframe == 'day') {
-                var api_url = 'https://api.offlinetv.live/clips?timeframe=day&group=otv';
+                var api_url = 'https://api.offlinetv.live/clips?timeframe=day&group=all';
                 var target = '#dayClips';
             }
             // Don't make more API calls if clips have already been loaded
