@@ -172,7 +172,7 @@
     <script type="text/javascript">
         // Load the clip when play button clicked
         function playClip(url) {
-            $('#clip iframe').attr('src', url + '&parent=' + window.location.host);
+            $('#clip iframe').attr('src', url + '&parent=' + window.location.host + '&autoplay=true');
             $('#clip').modal('show');
         }
         // Format the number of views with thousands separator
